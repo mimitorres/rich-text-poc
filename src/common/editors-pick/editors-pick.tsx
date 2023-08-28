@@ -4,6 +4,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import Editor from "common/lexical-editor/lexical-editor";
+import { TiptapEditor } from "common/tiptap-editor/tiptap-editor";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -47,14 +48,14 @@ export const EditorsPick = () => {
           aria-label="basic tabs example"
         >
           <Tab label="Lexical" />
-          <Tab label="Item Two" />
+          <Tab label="Tiptap" />
         </Tabs>
       </Box>
       <CustomTabPanel value={activeTab} index={0}>
         <Editor />
       </CustomTabPanel>
       <CustomTabPanel value={activeTab} index={1}>
-        Item Two
+        <TiptapEditor />
       </CustomTabPanel>
     </>
   );
